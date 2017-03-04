@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trigger Random</title>
+
+  <!-- Added link to the jQuery Library -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+  <!-- Added a link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="jumbotron">
+
+    <h1 class="text-center">Generate a Random Number!</h1>
+
+    <div class="text-center">
+
+      <!-- Here we have our button for generating random numbers (#random-button) -->
+      <button id="random-button" class="btn btn-primary btn-lg"><h1><span class="glyphicon glyphicon-envelope"></span></h1></button>
+      
+    </div>
+
+  </div>
+
+  <!-- Here we have div called "random-number" where our random number will go -->
+  <h1 class="text-center" id="random-number"></h1>
+
+  <script type="text/javascript">
+
+    var words = ["REVOLUTION", "FRENCH", "NATION", "PRIVILEGE", "NOBILITY", "CLERGY", "THIRD ESTATE", "VOTE", "NATIONAL ASSEMBLY", "KING", "CONSTITUTION", "THE BASTILLE", "PARISIANS", "TYRANNY", "THE TERROR", "ABSOLUTISM", "LET THEM EAT CAKE", "BEHEADING", "EXECUTIONER", "MARIE-ANTOINETTE", "LOUIS XVI", ]
+
+    
+
+    $(document).ready(function() {
+
+      // CREATE THE MISSING CODE HERE. Your code should add content to the random-number div.
+      // ...
+      $("#random-button").on("click", function() {
+
+        var wordsIndex = Math.floor((Math.random() * (words.length - 1) + 0));
+
+        var thisWord = words.splice( wordsIndex, 1 )[0]; 
+        // var num = Math.floor(Math.random() * 1000000000);
+        // var newDiv = $("<div>");
+        // newDiv.html($("#random-number").prepend(num))
+
+        $("#random-number").prepend("<div>" + wordsIndex + " " + thisWord + "</div>");
+        // $("#random-number").prepend("<div>" + num + "</div>");
+        // $("#random-number").prepend(num);
+
+        // alert(num);
+      })
+
+      // ...
+
+    });
+
+  </script>
+  
+</body>
+</html>
