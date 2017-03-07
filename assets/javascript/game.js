@@ -43,6 +43,8 @@ document.onkeyup = function() {
 
   var thisWord = words.splice( wordsIndex, 1 )[0]; 
 
+  document.getElementById("blanks").innerHTML = ("This word is " + thisWord);
+
 }
 
 
