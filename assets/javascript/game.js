@@ -15,11 +15,18 @@ var totalGuesses = 10;
 // How many guesses so far?
 var guesscount = 0;
 
-window.onload = function () {
+// window.onload = function () {
+//     var wordsIndex = Math.floor((Math.random() * (words.length - 1) + 0));
+//     var thisWord = words.splice( wordsIndex, 1 )[0]; 
+
+//     document.getElementById("myP").innerHTML = "Hello Dolly.";
+// }
+
+function setGame() {
     var wordsIndex = Math.floor((Math.random() * (words.length - 1) + 0));
     var thisWord = words.splice( wordsIndex, 1 )[0]; 
 
-    document.getElementById("myP").innerHTML = "Hello Dolly.";
+    document.getElementById("blanks").innerHTML = ("This word is " + thisWord);
 }
 
 
