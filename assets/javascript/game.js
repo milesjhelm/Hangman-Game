@@ -1,24 +1,40 @@
 // <script type="text/javascript">
 
-  // These are the words for the Hangman game.
-  var words = ["CITIZEN", "CHARLOTTE CORDAY", "REVOLUTION", "FRENCH", "NATION", "PRIVILEGE", "NOBILITY", "CLERGY", "THIRD ESTATE", "VOTE", "NATIONAL ASSEMBLY", "KING", "CONSTITUTION", "THE BASTILLE", "PARIS", "TYRANNY", "THE TERROR", "ABSOLUTISM", "LET THEM EAT CAKE", "BEHEADING", "EXECUTIONER", "MARIE-ANTOINETTE", "LOUIS XVI", "MIRABEAU", "DANTON", "MARAT", "NAPOLEON BONAPARTE", "BREAD", "ANARCHY", "THE COMMUNE", "LIBERTE EGALITE FRATERNITE", "LA MARSEILLAISE", "TUILERIES", "VERSAILLES", "REPUBLIC", "ARISTOCRATS", "GIRONDINS", "CONDORCET", "MONTAGNARDS", "LA FAYETTE", "CAMILLE DESMOULINS", "ROBESPIERRE", "GUILLOTINE", "COMMITTEE OF PUBLIC SAFETY", "THERMIDORIAN REACTION", "JACOBIN CLUB", "SANS-CULOTTES"];
+// These are the words for the Hangman game.
+var words = ["CITIZEN", "CHARLOTTE CORDAY", "REVOLUTION", "FRENCH", "NATION", "PRIVILEGE", "NOBILITY", "CLERGY", "THIRD ESTATE", "VOTE", "NATIONAL ASSEMBLY", "KING", "CONSTITUTION", "THE BASTILLE", "PARIS", "TYRANNY", "THE TERROR", "ABSOLUTISM", "LET THEM EAT CAKE", "BEHEADING", "EXECUTIONER", "MARIE-ANTOINETTE", "LOUIS XVI", "MIRABEAU", "DANTON", "MARAT", "NAPOLEON BONAPARTE", "BREAD", "ANARCHY", "THE COMMUNE", "LIBERTE EGALITE FRATERNITE", "LA MARSEILLAISE", "TUILERIES", "VERSAILLES", "REPUBLIC", "ARISTOCRATS", "GIRONDINS", "CONDORCET", "MONTAGNARDS", "LA FAYETTE", "CAMILLE DESMOULINS", "ROBESPIERRE", "GUILLOTINE", "COMMITTEE OF PUBLIC SAFETY", "THERMIDORIAN REACTION", "JACOBIN CLUB", "SANS-CULOTTES"];
 
 
+// Keep track of wins and losses
+var wins = 0;
+var losses = 0;
 
-// // Number of guesses the user can make
-// var totalGuesses = 10;
 
-// // How many guesses so far?
-// var guesscount = 0;
+// Number of guesses the user can make
+var totalGuesses = 10;
+
+// How many guesses so far?
+var guesscount = 0;
+
+window.onload = function () {
+    var wordsIndex = Math.floor((Math.random() * (words.length - 1) + 0));
+    var thisWord = words.splice( wordsIndex, 1 )[0]; 
+
+    document.getElementById("myP").innerHTML = "Hello Dolly.";
+}
 
 
 document.onkeyup = function() {
 
-
+  // Get key input from the user
   var userguess = String.fromCharCode(event.keyCode).toUpperCase();
 
   console.log(userguess);
   console.log(words[1][2]);
+
+
+  var wordsIndex = Math.floor((Math.random() * (words.length - 1) + 0));
+
+  var thisWord = words.splice( wordsIndex, 1 )[0]; 
 
 }
 
