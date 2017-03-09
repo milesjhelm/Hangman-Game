@@ -26,7 +26,7 @@ p:last-child {
 	margin-bottom: 0;
 }
 
-h1, h2, h3 {
+h1, h2, h3, #wins, #losses {
 	font-family: 'Snell Roundhand', Papyrus, Times, Times New Roman, serif;
 	font-weight: 700;
 	color: #555;
@@ -39,7 +39,7 @@ h1 {
 	padding-bottom: 20px;
 }
 
-h2, h3 {
+h2, h3, #wins, #losses{
 	font-size: 22px;
 }
 
@@ -91,7 +91,7 @@ h2, h3 {
 	border-radius: 5px;
 }
 
-#blanks {
+#blanks, #characterGuesses {
 	letter-spacing: 10px;
 	font-size: 35px;
 	
