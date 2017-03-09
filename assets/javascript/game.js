@@ -46,10 +46,13 @@ blankWord = document.onkeyup = function() {
 
   for (var i = 0; i < thisWord.length; i++) {
     if (thisWord[i] === userguess) {
-      blankWord[i] = userguess;
+      blankWord = blankWord.replaceAt(i, userguess);
     }
   }
 
+String.prototype.replaceAt=function(index, character) {
+    return this.substr(0, index) + character + this.substr(index+character.length);
+}
 
   // var wordsIndex = Math.floor((Math.random() * (words.length - 1) + 0));
 
