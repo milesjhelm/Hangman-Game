@@ -13,7 +13,6 @@ body {
 .container {
 	width: 100%;
 	max-width: 960px;
-	border-radius: 5px;
 /*	margin: 0 auto;
 	clear: both;*/
 }
@@ -27,7 +26,7 @@ p:last-child {
 }
 
 h1, h2, h3 {
-	font-family: 'Snell Roundhand', Papyrus, Times, Times New Roman, serif;
+	font-family: 'Snell Roundhand', cursive, Times, Times New Roman, serif;
 	font-weight: 700;
 	color: #555;
 }
@@ -90,14 +89,9 @@ h2, h3 {
 
 #guillotine {
 	width: 200px;
-	border-radius: 5px;
 }
 
-#blanks {
-	letter-spacing: 10px;
-	font-size: 35px;
-	
-}
+
 
 .sidebar {
 	background: #fff;
