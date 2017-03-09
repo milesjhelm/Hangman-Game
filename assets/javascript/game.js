@@ -11,10 +11,9 @@ var losses = 0;
 
 
 // Number of guesses the user can make
-var totalGuesses = 10;
+var guessCount = 15;
 
 // How many guesses so far?
-var guessCount = 0;
 
 // window.onload = function () {
 //     var wordsIndex = Math.floor((Math.random() * (words.length - 1) + 0));
@@ -27,6 +26,7 @@ function setGame() {
     var wordsIndex = Math.floor((Math.random() * (words.length - 1) + 0));
     thisWord = words.splice( wordsIndex, 1 )[0]; 
     blankWord = thisWord;
+    guessCount = 15;
 
     // document.getElementById("blanks").innerHTML = ("This word is " + thisWord);
     blankWord = setToBlanks(blankWord);
@@ -65,6 +65,23 @@ String.prototype.replaceAt=function(index, character) {
     alert("Solved! The answer is " + thisWord);
     setGame();
   }
+  else if (guessCount === 0) {
+    document.getElementById("guesses").innerHTML = ("Off with your head!");
+    alert("You have run out of guesses! The answer was " + thisWord);
+    setGame();    
+  }
+
+
+  guessCount--;
+  if (guessCount === 1 ) {
+    document.getElementById("guesses").innerHTML = ("You only have 1 guess left!");
+  }
+  else {
+    document.getElementById("guesses").innerHTML = ("You have " + guessCount + " guesses remaining.");
+  }
+
+  
+  // alert(guessCount);
   return blankWord;
 
 }

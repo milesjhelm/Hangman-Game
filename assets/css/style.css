@@ -54,7 +54,7 @@ h2, h3 {
 	width: 100%;
 }*/
 
-#logo {
+/*#logo {
 	width: 250px;
 	height: 90px;
 	background: #4aaaa5;
@@ -66,16 +66,14 @@ h2, h3 {
 	font-weight: 700;
 	font-size: 30px;
 	text-decoration: none;
-}
+}*/
 
 
 
 #main-container {
 	padding-top: 20px;
-}
-
-#main-container {
 	background: #eee;
+	height: 480px;
 }
 
 #game-panel {
@@ -99,15 +97,20 @@ h2, h3 {
 	
 }
 
-.sidebar {
-	background: #fff;
-	padding: 30px;
-	width: 100%;
-	max-width: 270px;
-	float: right;
-	border: 1px solid #ddd;
-	margin-bottom: 20px;
+#guesses {
+	font-family: 'Snell Roundhand', Papyrus, Times, Times New Roman, serif;
 }
+
+
+#copyright {
+	font-family: 'Snell Roundhand', Papyrus, Times, Times New Roman, serif;
+	padding-top: 30px;
+	color: #eee;
+	font-size: 30px;
+}
+
+
+
 
 h3, .sidebar, h2 {
 	border-bottom: 2px solid #eee;
@@ -116,8 +119,3 @@ h3, .sidebar, h2 {
 	line-height: 22px
 }
 
-.social {
-	width: 62px;
-	height: 62px;
-	margin-top: 8px;
-}
