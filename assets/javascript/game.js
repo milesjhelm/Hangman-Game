@@ -4,6 +4,7 @@
 var words = ["CITIZEN", "CHARLOTTE CORDAY", "REVOLUTION", "FRENCH", "NATION", "PRIVILEGE", "NOBILITY", "CLERGY", "THIRD ESTATE", "VOTE", "NATIONAL ASSEMBLY", "KING", "CONSTITUTION", "THE BASTILLE", "PARIS", "TYRANNY", "THE TERROR", "ABSOLUTISM", "LET THEM EAT CAKE", "BEHEADING", "EXECUTIONER", "MARIE-ANTOINETTE", "LOUIS XVI", "MIRABEAU", "DANTON", "MARAT", "NAPOLEON BONAPARTE", "BREAD", "ANARCHY", "THE COMMUNE", "LIBERTE EGALITE FRATERNITE", "LA MARSEILLAISE", "TUILERIES", "VERSAILLES", "REPUBLIC", "ARISTOCRATS", "GIRONDINS", "CONDORCET", "MONTAGNARDS", "LA FAYETTE", "CAMILLE DESMOULINS", "ROBESPIERRE", "GUILLOTINE", "COMMITTEE OF PUBLIC SAFETY", "THERMIDORIAN REACTION", "JACOBIN CLUB", "SANS-CULOTTES"];
 var thisWord = "";
 var blankWord = "";
+var newGame = true;
 
 // Keep track of wins and losses
 var wins = 0;
@@ -122,6 +123,20 @@ function setToBlanks(word) {
 //           alert('hello');
 //        }
 // });
+
+// function allLetter(inputtxt)  
+//   {  
+//    var letters = /^[A-Za-z]+$/;  
+//    if(inputtxt.value.match(letters))  
+//      {  
+//       return true;  
+//      }  
+//    else  
+//      {  
+//      alert("message");  
+//      return false;  
+//      }  
+//   }  
 
   // CREATE THE MISSING CODE HERE. Your code should add content to the random-number div.
   // ...
